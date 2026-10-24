@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Putri Christianti Harefa – Portofolio Teknik Elektro</title>
+<meta name="description" content="Portofolio Putri Christianti Harefa: elektronika daya, instrumentasi & kontrol, mikrokontroler, dan energi terbarukan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EDF1F0;--surface:#fff;--ink:#12201E;--muted:#4C5E5B;--line:#C9D4D1;--a:#1B4FD6;--b:#0C9C86;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1716;--surface:#152220;--ink:#E6EFED;--muted:#9DB1AD;--line:#263836;--a:#7C9DFF;--b:#3DD6BF;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1716;--surface:#152220;--ink:#E6EFED;--muted:#9DB1AD;--line:#263836;--a:#7C9DFF;--b:#3DD6BF;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;line-height:1.1;margin:0}
+a{color:var(--a)}
+:focus-visible{outline:3px solid var(--a);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+header.top .wrap{display:flex;align-items:center;gap:20px;height:56px}
+header.top b{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;white-space:nowrap}
+nav{display:flex;gap:18px;overflow-x:auto;margin-left:auto;scrollbar-width:none}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;white-space:nowrap}
+nav a:hover{color:var(--ink)}
+.hero{padding:56px 0 40px}
+.intro{display:grid;grid-template-columns:1fr 260px;gap:40px;align-items:center}
+.portrait{aspect-ratio:3/4;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--surface)}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:720px){.intro{grid-template-columns:1fr;gap:24px}.portrait{max-width:220px;order:-1}}
+.hero h1{font-size:clamp(40px,8vw,84px);font-weight:800;letter-spacing:-.02em;max-width:12ch}
+.hero p.lead{font-size:clamp(17px,2.2vw,21px);max-width:56ch;color:var(--muted);margin:20px 0 24px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:10px 18px;border:1.5px solid var(--ink);border-radius:4px;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.btn.p{background:var(--ink);color:var(--bg)}
+.scope{margin-top:40px;border:1px solid var(--line);border-radius:6px;background:var(--surface);padding:12px}
+.scope canvas{width:100%;height:230px;display:block}
+.scope small{display:block;color:var(--muted);font-size:13px;padding:6px 4px 0}
+section{padding:56px 0 8px}
+section>.wrap>h2{font-size:clamp(28px,4vw,40px);font-weight:700;margin-bottom:24px}
+.about{display:grid;grid-template-columns:2fr 1fr;gap:32px}
+.about p{margin:0 0 14px;max-width:62ch}
+.facts{border-left:3px solid var(--b);padding-left:16px;align-self:start}
+.facts div{margin-bottom:12px}.facts dt{font-weight:600}.facts dd{margin:0;color:var(--muted)}
+.facts dl{margin:0}
+.ph-img{display:block;width:100%;height:100%;object-fit:cover;background:var(--line)}
+.exp{display:grid;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.exp .card{display:grid;grid-template-columns:240px 1fr}
+.exp .media{aspect-ratio:4/3;border-right:1px solid var(--line)}
+.body{padding:20px}
+.body h3{font-size:21px;font-weight:700}
+.meta{color:var(--muted);font-size:14px;margin:6px 0 12px}
+.body ul{margin:0;padding-left:18px}.body li{margin-bottom:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.exp .card.noimg{display:block}
+.exp .card.topimg{display:block}
+.exp .card.topimg .pics{display:grid;gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.exp .card.topimg .pics.n2{grid-template-columns:1fr 1fr}
+.exp .card.topimg .media{aspect-ratio:16/9;border:0}
+.exp .card.topimg .pics.n2 .media{aspect-ratio:4/3}
+.proj .media{aspect-ratio:16/10;border-bottom:1px solid var(--line)}
+.proj .pics{display:grid;gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.proj .pics.n2{grid-template-columns:1fr 1fr}
+.proj .pics .media{border-bottom:0}
+.proj .pics.n2 .media{aspect-ratio:4/3}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tags span{font-size:13px;padding:2px 9px;border:1px solid var(--line);border-radius:99px;color:var(--muted)}
+.cert .media{aspect-ratio:4/3;border-bottom:1px solid var(--line)}
+.cert .body{padding:14px 16px}.cert h3{font-size:17px}
+.pub{border-left:4px solid var(--a);padding:6px 0 6px 18px;max-width:70ch}
+.pub p{margin:6px 0}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.skills div{border-top:3px solid var(--b);padding-top:10px}
+.skills h3{font-size:18px;margin-bottom:6px}.skills p{margin:0;color:var(--muted)}
+.edu{max-width:70ch}.edu p{margin:8px 0}
+footer{margin-top:64px;border-top:1px solid var(--line);padding:32px 0 calc(32px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:14px}
+.contact{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:17px}
+@media (max-width:720px){.about{grid-template-columns:1fr}.exp .card{grid-template-columns:1fr}.exp .media{border-right:0;border-bottom:1px solid var(--line)}header.top b{display:none}nav{margin-left:0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><b>PCH</b>
+<nav aria-label="Navigasi utama"><a href="#tentang">Tentang</a><a href="#keahlian">Keahlian</a><a href="#pengalaman">Pengalaman</a><a href="#organisasi">Organisasi</a><a href="#proyek">Proyek</a><a href="#publikasi">Publikasi</a><a href="#sertifikat">Sertifikat</a><a href="#kontak">Kontak</a></nav></div></header>
+
+<main>
+<div class="wrap hero">
+  <div class="intro"><div class="who">
+  <h1>Putri Christianti Harefa</h1>
+  <p class="lead">Lulusan Teknik Elektro yang mengerjakan elektronika daya, instrumentasi & kontrol, otomasi PLC & SCADA, mikrokontroler, dan energi terbarukan, dari simulasi di PSIM sampai pengujian perangkat keras dan integrasi Modbus.</p>
+  <div class="btns"><a class="btn p" href="#proyek">Lihat proyek</a><a class="btn" href="mailto:harefaputrichristianti@gmail.com">Kirim email</a></div></div>
+  <div class="portrait"><img src="images/foto-diri.jpeg" alt="Foto Putri Christianti Harefa" data-i="-1" data-b="images/foto-diri" data-pt="1" onerror="nx(this)"></div></div>
+  <div class="scope"><canvas id="scope" role="img" aria-label="Gelombang PWM bergeser fasa dua kanal dan arus gabungan interleaved buck chopper"></canvas>
+  <small>PWM bergeser fasa pada interleaved buck chopper: dua fasa bergeser 180° menghasilkan riak arus gabungan yang lebih kecil.</small></div>
+</div>
+
+<section id="tentang"><div class="wrap"><h2>Tentang saya</h2>
+<div class="about"><div id="aboutText"></div>
+<aside class="facts"><dl>
+<div><dt>Pendidikan</dt><dd>S1 Teknik Elektro, Universitas Katolik Soegijapranata</dd></div>
+<div><dt>IPK</dt><dd>3,45 / 4,00</dd></div>
+<div><dt>Lokasi</dt><dd>Semarang, Indonesia</dd></div>
+<div><dt>Fokus</dt><dd>Elektronika daya, instrumentasi & kontrol, otomasi PLC & SCADA, energi terbarukan</dd></div></dl></aside></div></div></section>
+
+<section id="keahlian"><div class="wrap"><h2>Keahlian</h2><div class="skills" id="skillList"></div></div></section>
+<section id="pengalaman"><div class="wrap"><h2>Pengalaman</h2><div class="exp" id="expList"></div></div></section>
+<section id="organisasi"><div class="wrap"><h2>Organisasi & Kepanitiaan</h2><div class="exp" id="orgList"></div></div></section>
+<section id="proyek"><div class="wrap"><h2>Proyek</h2><div class="grid" id="projList"></div></div></section>
+<section id="publikasi"><div class="wrap"><h2>Publikasi</h2>
+<div class="pub"><h3>Independent-Current-Regulated Interleaved Buck Chopper for Synchronous Generator</h3>
+<p>9th ICVEE 2026, Surabaya, 2026</p><p>Status: diterima untuk dipresentasikan.</p></div></div></section>
+<section id="sertifikat"><div class="wrap"><h2>Sertifikat</h2><div class="grid" id="certList"></div></div></section>
+<section id="pendidikan"><div class="wrap"><h2>Pendidikan</h2>
+<div class="edu"><h3>Sarjana Teknik Elektro</h3><p class="meta">Universitas Katolik Soegijapranata, Semarang · IPK 3,45/4,00 · 2022 – 2026</p>
+<p>Fokus pada elektronika daya, instrumentasi dan kontrol, mikrokontroler, serta energi terbarukan. Memiliki keterampilan praktis dalam perancangan PCB dengan Target 3001, pengujian dan pemecahan masalah perangkat keras, serta otomasi PLC/SCADA.</p></div></div></section>
+</main>
+
+<footer id="kontak"><div class="wrap"><h2 style="font-size:28px;margin-bottom:16px;color:var(--ink)">Kontak</h2>
+<div class="contact" style="flex-direction:column;gap:6px">
+<span>Semarang, Indonesia</span>
+<a href="mailto:harefaputrichristianti@gmail.com">harefaputrichristianti@gmail.com</a>
+<span>Telepon/WhatsApp: <a href="tel:+6282362246124">082362246124</a> · <a href="https://wa.me/6282362246124" target="_blank" rel="noopener">Chat WhatsApp</a></span>
+<a href="https://www.linkedin.com/in/putri-christianti-harefa" target="_blank" rel="noopener">LinkedIn</a></div>
+<p style="margin-top:24px">© 2026 Putri Christianti Harefa</p></div></footer>
+
+<script>
+/* ============ EDIT DI SINI ============
+   Taruh foto di folder "images/" lalu isi nama file pada kolom img.
+   Jika file belum ada, halaman menampilkan gambar pengganti. */
+var ABOUT=[
+"Saya lulusan Teknik Elektro Universitas Katolik Soegijapranata (IPK 3,45/4,00) dengan fokus pada elektronika daya, instrumentasi dan kontrol, otomasi PLC dan SCADA, mikrokontroler, serta energi terbarukan.",
+"Saya terbiasa merancang dan menguji perangkat keras: perancangan PCB dengan Target 3001, pengujian dan pemecahan masalah dengan osiloskop digital, serta otomasi PLC/SCADA. Saya ikut mengembangkan modul pelatihan PLC dan SCADA yang mencakup kendali motor, aktuator pneumatik, sensor, dan integrasi power meter melalui Modbus.",
+"Makalah saya tentang interleaved buck chopper dengan regulasi arus untuk generator sinkron diterima pada 9th ICVEE 2026."];
+
+var EXPERIENCE=[
+{title:"Magang",org:"PT PLN UP2B Jakarta Banten",date:"Feb 2025 – Mar 2025",img:["images/pengalaman-pln-1.jpeg","images/pengalaman-pln-2.jpeg"],
+ points:["Mendukung tim Fasilitas Operasi Telekomunikasi dengan membantu migrasi link WAN TI dan mengukur kabel serat optik teleproteksi.","Mengikuti inspeksi lapangan dan pemeliharaan peralatan, sehingga memperoleh bekal praktis dalam pemeliharaan dan pemecahan masalah kelistrikan."]},
+{title:"Asisten Laboratorium Mikroprosesor & Mikrokontroler",org:"Universitas Katolik Soegijapranata",date:"Sep 2025 – Des 2025",img:"images/pengalaman-asisten-lab.jpeg",
+ points:["Membantu dosen menjalankan sesi praktikum dan membimbing mahasiswa dalam Arduino, Arduino IDE, ATmega, CVAVR, dan pemrograman C.","Membuat dan menguji modul perangkat keras berbasis Arduino dan ATmega untuk kegiatan praktikum.","Menjalankan simulasi Proteus dan pengujian perangkat keras dengan Arduino, ATmega, dan osiloskop digital; melakukan pemecahan masalah serta evaluasi modul praktikum."]}];
+
+/* Organisasi & kepanitiaan digabung di sini */
+var ORGS=[
+{title:"Advokasi, Senat Mahasiswa Fakultas Teknik",org:"Universitas Katolik Soegijapranata",date:"Sep 2023 – Sep 2024",
+ points:["Menghimpun aspirasi mahasiswa Fakultas Teknik dan menyampaikannya kepada dekanat.","Mewakili kepentingan mahasiswa dalam komunikasi dengan pihak fakultas.","Menjembatani mahasiswa dan dekanat agar masukan dan keluhan tersampaikan dengan jelas."]},
+{title:"Humas, Senat Mahasiswa Fakultas Teknik",org:"Universitas Katolik Soegijapranata",date:"Sep 2022 – Sep 2023",
+ points:["Mengelola komunikasi antara fakultas dan mahasiswa.","Menjalin kerja sama dengan organisasi eksternal dan fakultas lain.","Menjadi penghubung Senat Mahasiswa dengan pihak luar dalam kegiatan organisasi."]},
+{title:"Nama kepanitiaan (contoh, ganti dengan milikmu)",org:"Nama acara / organisasi",date:"Tahun",
+ points:["[Peran], mis. koordinator atau anggota divisi [nama divisi].","[Tugas utama], mis. menyusun rundown, mengatur perlengkapan, atau menghubungi pembicara.","[Hasil], mis. acara berjalan sesuai jadwal dengan [jumlah] peserta."]}];
+
+var PROJECTS=[
+{title:"Independent-Current-Regulated Interleaved Buck Chopper for Synchronous Generator",date:"Jan 2026 – Jun 2026",role:"Simulasi PSIM, perancangan & pemecahan masalah perangkat keras, penulis & presenter",img:"images/proyek-buck-chopper.jpeg",
+ points:["Menentukan konstanta sensor arus sebagai sinyal umpan balik pada pengendali arus PI lingkar tertutup.","Menerapkan PWM bergeser fasa dengan kontrol PI pada mikrokontroler STM32F407.","Makalah hasil proyek diterima untuk dipresentasikan pada 9th ICVEE 2026."],tags:["PSIM","STM32F407","PWM bergeser fasa","Kontrol PI"]},
+{title:"Sistem Pembersih Panel Surya Otomatis",date:"Sep 2025 – Des 2025",role:"Ketua Tim",img:"images/proyek-pembersih-panel-surya.jpeg",
+ points:["Memimpin tim selama instalasi, ikut dalam pemasangan, pengkabelan, dan pengujian, serta menjaga pekerjaan sesuai rencana dan prosedur keselamatan.","Menyelesaikan kendala pengkabelan dan instalasi untuk memasang sistem pembersih pada susunan PV, dengan kontrol berbasis ESP agar dapat beroperasi andal."],tags:["ESP","Sistem PV","Instalasi"]},
+{title:"Inverter Buck-Boost 5 Level",date:"Sep 2025 – Des 2025",role:"",img:"images/proyek-inverter-5-level.jpeg",
+ points:["Menulis urutan pensaklaran inverter buck-boost 5 level pada board STM32F4 menggunakan lookup table yang dihasilkan dari simulasi PSIM."],tags:["STM32F4","PSIM","Inverter"]},
+{title:"Modul Pembelajaran PLC & SCADA",date:"2024 – 2025",role:"Proyek tim",img:["images/proyek-plc-scada-1.jpeg","images/proyek-plc-scada-2.jpeg"],
+ points:["Berkontribusi pada modul pelatihan PLC dan SCADA yang mencakup kendali motor, aktuator pneumatik, dan sensor, termasuk operasi maju-mundur, sekuens pneumatik, dan Emergency Stop.","Menghubungkan power meter Rennata ke sistem melalui Modbus: pengkabelan, pengaturan komunikasi, dan pengujian verifikasi."],tags:["PLC","SCADA","Modbus","Pneumatik"]}
+/* Tambahkan proyek baru dengan menyalin salah satu blok di atas */];
+
+var SKILLS=[
+["Elektronika daya & kontrol","Interleaved buck chopper, PWM bergeser fasa, kontrol PI, instrumentasi & kontrol"],
+["Perangkat keras & embedded","Desain PCB (Target 3001), Arduino, ATmega, STM32F407, ESP, C/C++, CVAVR, pengujian dan pemecahan masalah perangkat keras, osiloskop digital"],
+["Otomasi & energi terbarukan","PLC, SCADA, Modbus, kendali pneumatik, sistem PV"],
+["Perangkat lunak & simulasi","PSIM, Proteus, Arduino IDE, Target 3001"]];
+
+var CERTS=[
+{title:"Nama sertifikat 1",issuer:"Penerbit · Tahun",img:"images/sertifikat-1.png"},
+{title:"Nama sertifikat 2",issuer:"Penerbit · Tahun",img:"images/sertifikat-2.png"}];
+/* ============ AKHIR BAGIAN EDIT ============ */
+
+function ph(label){var s='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400"><rect width="640" height="400" fill="#9fb3af"/><g stroke="#ffffff55" stroke-width="1">'+Array.from({length:15},function(_,i){return '<path d="M'+(i*45)+' 0V400M0 '+(i*28)+'H640"/>'}).join('')+'</g><path d="M0 250h120v-80h160v80h120v-80h160v80h80" fill="none" stroke="#1B4FD6" stroke-width="5"/><text x="320" y="330" font-family="sans-serif" font-size="22" fill="#12201E" text-anchor="middle">Tambahkan foto: '+label+'</text></svg>';return 'data:image/svg+xml;utf8,'+encodeURIComponent(s)}
+function phP(){var s='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400"><rect width="300" height="400" fill="#9fb3af"/><circle cx="150" cy="150" r="55" fill="#ffffff99"/><path d="M45 400c0-95 48-160 105-160s105 65 105 160z" fill="#ffffff99"/><text x="150" y="36" font-family="sans-serif" font-size="15" fill="#12201E" text-anchor="middle">Tambahkan foto diri</text><text x="150" y="58" font-family="sans-serif" font-size="13" fill="#12201E" text-anchor="middle">images/foto-diri.jpg</text></svg>';return 'data:image/svg+xml;utf8,'+encodeURIComponent(s)}
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+var EXTS=['.jpg.jpeg','.jpeg','.jpg','.png','.webp','.JPG','.JPEG'];
+function base(s){return s.replace(/(\.jpg\.jpeg|\.jpeg|\.jpg|\.png|\.webp)$/i,'')}
+function nx(el){var i=+(el.dataset.i||0)+1;if(i<EXTS.length){el.dataset.i=i;el.src=el.dataset.b+EXTS[i]}else{el.onerror=null;el.src=el.dataset.pt?phP():ph(el.dataset.b+'.jpeg')}}
+function img(src,alt){var b=base(src);return '<div class="media"><img class="ph-img" loading="lazy" src="'+esc(src)+'" alt="'+esc(alt)+'" data-i="-1" data-b="'+esc(b)+'" onerror="nx(this)"></div>'}
+function lis(a){return '<ul>'+a.map(function(p){return '<li>'+esc(p)+'</li>'}).join('')+'</ul>'}
+var $=function(i){return document.getElementById(i)};
+$('aboutText').innerHTML=ABOUT.map(function(p){return '<p>'+esc(p)+'</p>'}).join('');
+$('expList').innerHTML=EXPERIENCE.map(function(e){var im=[].concat(e.img);return '<article class="card topimg"><div class="pics n'+im.length+'">'+im.map(function(s,i){return img(s,e.title+' – '+e.org+' ('+(i+1)+')')}).join('')+'</div>'+'<div class="body"><h3>'+esc(e.title)+'</h3><div class="meta">'+esc(e.org)+' · '+esc(e.date)+'</div>'+lis(e.points)+'</div></article>'}).join('');
+$('orgList').innerHTML=ORGS.map(function(e){return '<article class="card noimg"><div class="body"><h3>'+esc(e.title)+'</h3><div class="meta">'+esc(e.org)+' · '+esc(e.date)+'</div>'+lis(e.points)+'</div></article>'}).join('');
+$('projList').innerHTML=PROJECTS.map(function(p){var im=[].concat(p.img);return '<article class="card proj"><div class="pics n'+im.length+'">'+im.map(function(s,i){return img(s,p.title+(im.length>1?' ('+(i+1)+')':''))}).join('')+'</div><div class="body"><h3>'+esc(p.title)+'</h3><div class="meta">'+esc(p.date)+(p.role?' · Peran: '+esc(p.role):'')+'</div>'+lis(p.points)+'<div class="tags">'+(p.tags||[]).map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div></div></article>'}).join('');
+$('skillList').innerHTML=SKILLS.map(function(s){return '<div><h3>'+esc(s[0])+'</h3><p>'+esc(s[1])+'</p></div>'}).join('');
+$('certList').innerHTML=CERTS.map(function(c){return '<article class="card cert">'+img(c.img,c.title)+'<div class="body"><h3>'+esc(c.title)+'</h3><div class="meta" style="margin:4px 0 0">'+esc(c.issuer)+'</div></div></article>'}).join('');
+
+/* Animasi gelombang PWM bergeser fasa */
+(function(){
+var cv=$('scope'),cx=cv.getContext('2d'),W,H,D=0.4,reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function size(){var r=cv.getBoundingClientRect(),d=devicePixelRatio||1;W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0)}
+function col(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+function tri(ph){return ph<D?-1+2*ph/D:1-2*(ph-D)/(1-D)}
+function draw(t){
+ cx.clearRect(0,0,W,H);var P=Math.max(110,W/5),off=reduce?0:t*0.04,lane=H/3,m=lane*0.16,
+ cs=[col('--a'),col('--b'),col('--ink')],mu=col('--muted'),ln=col('--line');
+ cx.font='13px "IBM Plex Sans",sans-serif';cx.lineWidth=2;cx.lineJoin='round';
+ [['Fasa 1',0,0],['Fasa 2',1,.5],['Arus gabungan',2,0]].forEach(function(L){
+  var y0=lane*L[1],top=y0+m,bot=y0+lane-m;
+  cx.strokeStyle=ln;cx.lineWidth=1;cx.beginPath();cx.moveTo(0,y0+lane);cx.lineTo(W,y0+lane);cx.stroke();
+  cx.strokeStyle=cs[L[1]];cx.lineWidth=2.2;cx.beginPath();
+  for(var x=0;x<=W;x+=1.5){
+   var u=(x+off)/P,a=((u+L[2])%1+1)%1,v,y;
+   if(L[1]<2){y=a<D?top:bot}
+   else{var b=((u+.5)%1+1)%1;v=(tri(a)+tri(b))/2*2.2;y=(top+bot)/2-v*(bot-top)/2}
+   x?cx.lineTo(x,y):cx.moveTo(x,y)}
+  cx.stroke();cx.fillStyle=mu;cx.fillText(L[0],8,y0+14)});
+}
+function loop(t){draw(t);if(!reduce)requestAnimationFrame(loop)}
+size();addEventListener('resize',function(){size();draw(0)});
+matchMedia('(prefers-color-scheme:dark)').addEventListener&&matchMedia('(prefers-color-scheme:dark)').addEventListener('change',function(){draw(0)});
+document.fonts&&document.fonts.ready.then(function(){draw(0)});
+requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
